@@ -1,42 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>jQuery fullScreen</title>
-        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
-        <base target="content-frame">
-    </head>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <body>
-        <div class="container">
-            <h1>
-                jQuery fullScreen
-            </h1>
-            <section class="main-content">
-                <p>jQuery fullScreen uses FullScreen API</p>
-                <p>
-                    <button id="tofullscreen">Entire page full screen</button>
-                </p>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
 
-                <h2>This is a video element</h2>
-                <p>Take a look at this element going full screen:</p>
-                <video id="video" controls width="320">
-                    <source src="http://archive.org/download/HampshireLinuxUserGroupTroubleshootingTools/troubleshooting_512kb.mp4">
-                    <source src="http://archive.org/download/HampshireLinuxUserGroupTroubleshootingTools/troubleshooting.ogv">
-                </video>
-                <button id="fullscreenvideo">Full screen video with jQuery selector</button>
-                <button id="fullscreenvideoid">Full screen video by plain text id</button>
-            </section>
-            <p style="margin-top: 30px;">Code is available <a href="https://github.com/kinncj/jquery-fullscreen">here</a>.</p>
-        </div>
+    <title>Jquery-fullscreen by kinncj</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Jquery-fullscreen</h1>
+        <h2>jQuery fullScreen plugin</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/kinncj/jquery-fullscreen/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/kinncj/jquery-fullscreen/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/kinncj/jquery-fullscreen" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>jQuery fullScreen uses FullScreen API.</h3>
+
+<p>This plugin was made thinking in a easy way to work with Full Screen API and jQuery, you can check out the code:</p>
+
+<pre><  code>
+$ git clone git@github.com:kinncj/jquery-fullscreen.git
+</code></pre>
+
+<h3>Take a look in entire page full screen view</h3>
+
+<p><a href="#" id="tofullscreen">You just need to click here.</a></p>
+
+<h3>Here, you can check and element into entire view to, like the Video element</h3>
+<p>
+  <video id="video" controls width="320">
+    <source src="http://archive.org/download/HampshireLinuxUserGroupTroubleshootingTools/troubleshooting_512kb.mp4">
+    <source src="http://archive.org/download/HampshireLinuxUserGroupTroubleshootingTools/troubleshooting.ogv">
+  </video>
+  <p><a href="#" id="fullscreenvideo">You just need to click here.</a></p>
+  <p><a href="#" id="fullscreenvideoid">Or here to a plain text id "selector" example.</a></p>
+</p>
+
+<h3>How to use</h3>
+
+<p>
+  Simple, check this code:
+  <pre>
+    <code>
+        $(document).ready(function(){
+          /**
+           * $("#clickable_selector_to_invoke_fullScreen").fullScreen(/* the selector who will "be fullScreen" */);
+           */
+          $("#tofullscreen").fullScreen(); // Entire page
+          $("#fullscreenvideo").fullScreen($("#video")); //Video element with jQuery selector
+          $("#fullscreenvideoid").fullScreen("video"); //Video element with plain text id selector
+        });
+
+        //You are invited to check the source code of this page.
+    </code>
+  </pre>
+</p>
+
+<h3>Author</h3>
+
+<p>Kinn Coelho Julião, (<a href="https://kinncj.github.com" class="user-mention">@kinncj</a> )</p>
+
+<h3>Contact</h3>
+
+<p>You can find me in my <a href="http://www.kinncj.com.br">website</a></p>
+      </section>
+    </div>
         <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-        <script src="lib/fullscreen/jquery.fullscreen.js"></script>
+        <script src="javascripts/lib/fullscreen/jquery.fullscreen.js"></script>
         <script>
         $(document).ready(function(){
-        	$("#tofullscreen").fullScreen();
-        	$("#fullscreenvideo").fullScreen($("#video"));
-        	$("#fullscreenvideoid").fullScreen("video");
+          $("#tofullscreen").fullScreen();
+          $("#fullscreenvideo").fullScreen($("#video"));
+          $("#fullscreenvideoid").fullScreen("video");
         });
         </script>
-    </body>
+  </body>
 </html>
