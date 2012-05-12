@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery fullScreen</title>
+        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
+        <base target="content-frame">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>
+                jQuery fullScreen
+            </h1>
+            <section class="main-content">
+                <p>jQuery fullScreen uses FullScreen API</p>
+                <p>
+                    <button id="tofullscreen">Entire page full screen</button>
+                </p>
+
+                <h2>This is a video element</h2>
+                <p>Take a look at this element going full screen:</p>
+                <video id="video" controls width="320">
+                    <source src="http://archive.org/download/HampshireLinuxUserGroupTroubleshootingTools/troubleshooting_512kb.mp4">
+                    <source src="http://archive.org/download/HampshireLinuxUserGroupTroubleshootingTools/troubleshooting.ogv">
+                </video>
+                <button id="fullscreenvideo">Full screen video with jQuery selector</button>
+                <button id="fullscreenvideoid">Full screen video by plain text id</button>
+            </section>
+            <p style="margin-top: 30px;">Code is available <a href="https://github.com/kinncj/jquery-fullscreen">here</a>.</p>
+        </div>
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="lib/fullscreen/jquery.fullscreen.js"></script>
+        <script>
+        $(document).ready(function(){
+        	$("#tofullscreen").fullScreen();
+        	$("#fullscreenvideo").fullScreen($("#video"));
+        	$("#fullscreenvideoid").fullScreen("video");
+        });
+        </script>
+    </body>
+</html>

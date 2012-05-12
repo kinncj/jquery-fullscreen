@@ -1,0 +1,101 @@
+html {
+	font: 100%/1.3  Helvetica;
+}
+
+body {
+	font: 70%/1.3  Helvetica;
+}
+
+h1 {
+	font: bold 2em verdana;
+}
+
+
+html,body,form,fieldset,legend,dt,dd {
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,ol,dl {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin-bottom: 0.5em;
+}
+
+h2 {
+	margin-top: 20px;
+}
+
+pre {
+	font-size: 1.5em;
+}
+
+li,dd {
+	margin-left: 1.5em;
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+html {
+	color: #000;
+	background: #CCC;
+	min-height: 100%;
+}
+
+body {
+	margin-bottom: 30px;
+}
+
+ul {
+	margin: 10px 0;
+}
+
+/* Structure */
+.container {
+	width: 800px;
+	min-height: 600px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-top: none;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+@media screen and (max-width: 320px) {
+	#container {
+		width: 280px;
+		padding: 10px;
+	}
+}
+
+video {
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* Fullscreen styles */
+html:-moz-full-screen {
+	background: #000;
+}
+
+html:-webkit-full-screen {
+	background: #000;
+}
+
+html:fullscreen {
+	background: #000;
+}
